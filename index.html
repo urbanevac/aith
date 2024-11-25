@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AITH Consulting</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
+  <style>
+    body {
+      background-color: #ffedd5; /* orange 500 background */
+    }
+    .icon-gold {
+      color: #b6862e; /* Dark gold color for icons and logo */
+    }
+    .btn-primary {
+      background-color: #b6862e;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #9e7928;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #b6862e; /* Gold color for navigation arrows */
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 1.5rem; /* Increase arrow size */
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      visibility: visible !important; /* Ensure visibility */
+      opacity: 1;
+    }
+    .swiper-pagination-bullet {
+      background-color: #b6862e; /* Gold color for pagination dots */
+      opacity: 0.6; /* Slightly transparent dots for inactive state */
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1; /* Fully opaque for active dot */
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-yellow-50">
+  <!-- Header -->
+  <header class="bg-gray-900 shadow-sm fixed top-0 left-0 right-0 z-10 py-4 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="text-2xl font-bold icon-gold">AITH Consulting</div>
+      <div class="lg:hidden">
+        <!-- Hamburger Button -->
+        <button id="hamburger-btn" class="text-gray-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+      <!-- Navigation Links -->
+      <div id="mobile-menu" class="hidden lg:flex lg:space-x-6 lg:items-center">
+        <a href="#services" class="block lg:inline text-white hover:text-yellow-600 py-2">Services</a>
+        <a href="#about" class="block lg:inline text-white hover:text-yellow-600 py-2">About</a>
+        <a href="#team" class="block lg:inline text-white hover:text-yellow-600 py-2">Team</a>
+        <a href="#features" class="block lg:inline text-white hover:text-yellow-600 py-2">Clients</a>
+        <a href="#contact" class="block lg:inline text-white hover:text-yellow-600 py-2">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-red-950 text-white py-32 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://picsum.photos/id/378/1920/1200" alt="Business meeting" class="w-full h-full object-cover opacity-80">
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 relative">
+      <h1 class="text-5xl font-bold mb-6">Transform Your Business Vision Into Reality</h1>
+      <p class="text-xl mb-8">Expert consulting services tailored to drive growth and innovation</p>
+      <a href="#contact" class="btn-primary px-6 py-3 rounded-lg font-semibold transition-colors">Schedule Consultation</a>
+    </div>
+  </section>
+
+
+
+ <!-- Services Section -->
+  <section id="services" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+ <p class="text-center text-gray-600 mb-8">
+      Our comprehensive range of consulting services is designed to meet the unique needs of each client. From financial planning to strategic management, we help you achieve your business goals with precision and efficiency.
+    </p>
+ 
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 icon-gold mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M5 4v16h14V4H5z" /></svg>
+          <h3 class="text-xl font-semibold mb-3">Financial Advisory</h3>
+          <p class="text-gray-600">Comprehensive financial planning and strategy development for sustainable growth</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 icon-gold mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l2-2-2-2m6 2h.01M4 6h16M4 10h16M4 14h16M4 18h7" /></svg>
+          <h3 class="text-xl font-semibold mb-3">Tax Services</h3>
+          <p class="text-gray-600">Expert tax planning and compliance services to optimize your tax position</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 icon-gold mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4H8l4-4 4 4h-3v4z" /></svg>
+          <h3 class="text-xl font-semibold mb-3">Business Advisory</h3>
+          <p class="text-gray-600">Strategic guidance to enhance operations and achieve business objectives</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 icon-gold mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <h3 class="text-xl font-semibold mb-3">Management Consulting</h3>
+          <p class="text-gray-600">Transformative solutions to optimize performance and drive growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose AITH</h2>
+<p class="text-center text-gray-600 mb-8">
+      At AITH Consulting, we are dedicated to delivering tailored solutions that drive growth and innovation for businesses across industries. With a commitment to excellence and a proven track record, we transform visions into tangible results.
+    </p>
+   
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl font-bold icon-gold mb-2 counter" data-number="20" data-suffix="+">0</div>
+          <p class="text-gray-600">Years of Experience</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold icon-gold mb-2 counter" data-number="500" data-suffix="+">0</div>
+          <p class="text-gray-600">Satisfied Clients</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold icon-gold mb-2 counter" data-number="90" data-suffix="%">0</div>
+          <p class="text-gray-600">Repeat Customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    // Function to animate counters
+    const animateCounters = () => {
+      counters.forEach((counter) => {
+        const target = parseInt(counter.getAttribute("data-number"), 10);
+        const suffix = counter.getAttribute("data-suffix") || "";
+        const duration = 2000; // Animation duration in ms
+        const steps = duration / 16.67; // Approx. 60 frames per second
+        const increment = target / steps;
+
+        let count = 0;
+        const interval = setInterval(() => {
+          count += increment;
+          if (count >= target) {
+            counter.textContent = target + suffix; // Final value
+            clearInterval(interval);
+          } else {
+            counter.textContent = Math.round(count) + suffix;
+          }
+        }, 16.67); // Frame duration
+      });
+    };
+
+    // Set up Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect(); // Stop observing once animated
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    // Observe the "About" section
+    const aboutSection = document.querySelector("#about");
+    if (aboutSection) observer.observe(aboutSection);
+  });
+</script>
+
+
+<!-- Team Section -->
+  <section id="team" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+<p class="text-center text-gray-600 mb-8">
+      Our team of seasoned professionals is the backbone of AITH Consulting. With expertise across various domains, they are committed to delivering innovative solutions and unparalleled value to our clients.
+    </p>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Team Member Placeholder -->
+        <div class="text-center">
+          <img src="https://picsum.photos/id/349/150" alt="Team Member" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold">John Doe</h3>
+          <p class="text-gray-600">CEO & Founder</p>
+        </div>
+        <div class="text-center">
+          <img src="https://picsum.photos/id/64/150" alt="Team Member" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold">Jane Smith</h3>
+          <p class="text-gray-600">Financial Advisor</p>
+        </div>
+        <div class="text-center">
+          <img src="https://picsum.photos/id/375/150" alt="Team Member" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold">Mike Johnson</h3>
+          <p class="text-gray-600">Tax Consultant</p>
+        </div>
+        <div class="text-center">
+          <img src="https://picsum.photos/id/1027/150" alt="Team Member" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold">Emily Davis</h3>
+          <p class="text-gray-600">Business Advisor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Clients Section -->
+  <section id="clients" class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Clients</h2>
+<p class="text-center text-gray-600 mb-8">
+      Our clients are solopreneurs, startups, scale-ups and established companies from a range of industries.
+    </p>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Client Logo Placeholder -->
+        <img src="https://picsum.photos/id/357/150/120" alt="Client Logo" class="mx-auto">
+        <img src="https://picsum.photos/id/357/150/120" alt="Client Logo" class="mx-auto">
+        <img src="https://picsum.photos/id/357/150/120" alt="Client Logo" class="mx-auto">
+        <img src="https://picsum.photos/id/357/150/120" alt="Client Logo" class="mx-auto">
+      </div>
+    </div>
+  </section>
+
+<!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+      <!-- Swiper Container -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="text-gray-600 mb-4">"AITH Consulting transformed our business operations. Their insights were invaluable."</p>
+            <div class="flex flex-col items-center">
+              <img src="https://picsum.photos/50" alt="Client 1" class="w-12 h-12 rounded-full mb-2">
+              <div>
+                <h4 class="font-semibold">John Doe</h4>
+                <p class="text-sm text-gray-500">CEO, Company A</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="text-gray-600 mb-4">"Their expertise helped us achieve record-breaking growth in just six months."</p>
+            <div class="flex flex-col items-center">
+              <img src="https://picsum.photos/50" alt="Client 2" class="w-12 h-12 rounded-full mb-2">
+              <div>
+                <h4 class="font-semibold">Jane Smith</h4>
+                <p class="text-sm text-gray-500">Marketing Director, Company B</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="text-gray-600 mb-4">"A trustworthy partner who delivers beyond expectations. Highly recommend!"</p>
+            <div class="flex flex-col items-center">
+              <img src="https://picsum.photos/50" alt="Client 3" class="w-12 h-12 rounded-full mb-2">
+              <div>
+                <h4 class="font-semibold">Emily Johnson</h4>
+                <p class="text-sm text-gray-500">COO, Company C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new Swiper(".swiper", {
+        loop: true, // Infinite loop
+        slidesPerView: 1, // Show one testimonial at a time
+        spaceBetween: 20, // Spacing between slides
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000, // 5 seconds per slide
+        },
+      });
+    });
+  </script>
+
+  <!-- Contact Section -->
+<section id="contact" class="py-20 pb-32"> <!-- Added extra bottom padding -->
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+<p class="text-center text-gray-600 mb-8">
+      We're here to help you take the next step in your business journey. Whether you have questions, need guidance, or are ready to collaborate, reach out to us today. Until end of January 2025, we are offering free, no-obligation consulting sessions. 
+    </p>
+  
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 icon-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2a2 2 0 012 2v12a2 2 0 01-2 2H8l-4 4V4a2 2 0 012-2h10z" /></svg>
+          <span class="text-gray-600">contact@aithconsulting.com</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 icon-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h4l1-3h10l1 3h4v11H3V8z" /></svg>
+          <span class="text-gray-600">+44 (1908) 123-4567</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 icon-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l1-3a2 2 0 012-2h14a2 2 0 012 2l1 3M21 10l-9 7-9-7" /></svg>
+          <span class="text-gray-600">123 Business Road, London, UK</span>
+        </div>
+      </div>
+      <form class="bg-white p-6 rounded-lg shadow-md">
+        <div class="space-y-4">
+          <input type="text" class="w-full p-4 border rounded-md focus:outline-none" placeholder="Your Name" />
+          <input type="email" class="w-full p-4 border rounded-md focus:outline-none" placeholder="Your Email" />
+          <textarea class="w-full p-4 border rounded-md focus:outline-none" rows="5" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn-primary w-full p-4 rounded-lg font-semibold">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer here -->
+
+  <!-- Terms and Conditions Modal -->
+  <div class="modal" id="terms-modal">
+    <div class="modal-content relative">
+      <span class="modal-close" id="terms-close">&times;</span>
+      <h2 class="text-xl font-bold mb-4">Terms and Conditions</h2>
+      <p class="text-gray-700">
+        Welcome to AITH Consulting! By accessing and using our website, you agree to comply with the following terms and conditions.
+      </p>
+      <ul class="list-disc list-inside mt-4 text-gray-700">
+        <li>You may not reproduce or distribute any content without our consent.</li>
+        <li>Your use of the site must comply with all applicable laws.</li>
+        <li>We reserve the right to modify these terms at any time.</li>
+      </ul>
+      <p class="mt-4 text-gray-700">If you have questions, please contact us at info@aithconsulting.com.</p>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal" id="privacy-modal">
+    <div class="modal-content relative">
+      <span class="modal-close" id="privacy-close">&times;</span>
+      <h2 class="text-xl font-bold mb-4">Privacy Policy</h2>
+      <p class="text-gray-700">
+        Your privacy is important to us. This policy outlines how we collect, use, and protect your information.
+      </p>
+      <ul class="list-disc list-inside mt-4 text-gray-700">
+        <li>We collect data to provide better services, such as usage statistics.</li>
+        <li>Your data will not be shared with third parties without your consent.</li>
+        <li>We use secure protocols to protect your information.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-sm text-gray-600">
+        © 2024 AITH Consulting. All rights reserved. 
+        <span class="text-yellow-600 cursor-pointer" id="terms-link">Terms and Conditions</span> |
+        <span class="text-yellow-600 cursor-pointer" id="privacy-link">Privacy Policy</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new Swiper(".swiper", {
+        loop: true, // Infinite loop
+        slidesPerView: 1, // Show one testimonial at a time
+        spaceBetween: 20, // Spacing between slides
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000, // 5 seconds per slide
+        },
+      });
+
+      // Modal functionality
+      const termsLink = document.getElementById('terms-link');
+      const privacyLink = document.getElementById('privacy-link');
+      const termsModal = document.getElementById('terms-modal');
+      const privacyModal = document.getElementById('privacy-modal');
+      const termsClose = document.getElementById('terms-close');
+      const privacyClose = document.getElementById('privacy-close');
+
+      termsLink.addEventListener('click', () => {
+        termsModal.style.display = 'flex';
+      });
+
+      privacyLink.addEventListener('click', () => {
+        privacyModal.style.display = 'flex';
+      });
+
+      termsClose.addEventListener('click', () => {
+        termsModal.style.display = 'none';
+      });
+
+      privacyClose.addEventListener('click', () => {
+        privacyModal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === termsModal || e.target === privacyModal) {
+          termsModal.style.display = 'none';
+          privacyModal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+
+<!-- Mobile header script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
+
+
+ <!-- Counter Animation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll("[data-number]");
+    const animationDuration = 2000; // Total animation time in milliseconds
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute("data-number"), 10);
+      const suffix = counter.getAttribute("data-suffix") || ""; // Optional suffix
+      const steps = animationDuration / 16.67; // Approx. 60 frames per second
+      const increment = target / steps;
+
+      let count = 0;
+      const interval = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+          counter.textContent = target + suffix; // Ensure exact match at the end
+          clearInterval(interval);
+        } else {
+          counter.textContent = Math.round(count) + suffix;
+        }
+      }, 16.67); // Frame duration (1 second / 60 frames)
+    });
+  });
+</script>
+
+<script>
+  document.body.classList.add('min-h-screen', 'flex', 'flex-col'); // Ensures the page takes full height and footer sticks at the bottom
+</script>
+
+</body>
+</html>
