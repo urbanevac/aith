@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clients - AITH Consulting</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
+  <style>
+    body {
+      background-color: #ffedd5;
+      font-family: sans-serif;
+    }
+
+    .icon-gold {
+      color: #b6862e;
+    }
+
+    .btn-primary {
+      background-color: #b6862e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #9e7928;
+    }
+
+    .section-card {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .client-logo {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .case-study {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50">
+
+<header class="bg-gray-900 shadow-sm fixed top-0 left-0 right-0 z-10 py-4">
+  <nav class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="aithlogo.png" alt="AITH Logo" class="w-14 h-14">
+      <div class="ml-4 text-2xl font-bold text-white icon-gold">AITH Consulting</div>
+    </div>
+    <div class="hidden lg:flex lg:space-x-6 lg:items-center">
+      <a href="index.html" class="text-white hover:text-yellow-600 py-2">Home</a>
+      <a href="services.html" class="text-white hover:text-yellow-600 py-2">Services</a>
+      <a href="index.html#about" class="text-white hover:text-yellow-600 py-2">About</a>
+      <a href="index.html#team" class="text-white hover:text-yellow-600 py-2">Team</a>
+      <a href="clients.html" class="text-white hover:text-yellow-600 py-2">Clients</a>
+      <a href="index.html#contact" class="text-white hover:text-yellow-600 py-2">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="bg-red-950 text-white py-32 relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="clients-hero.jpg" alt="Hero Banner for Clients" class="w-full h-full object-cover opacity-80">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80"></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 relative">
+    <h1 class="text-5xl font-bold mb-6">Trusted by Leading Businesses</h1>
+    <p class="text-xl mb-8">We partner with a diverse range of clients to achieve success.</p>
+  </div>
+</section>
+
+<main class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Clients</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="section-card">
+        <img src="https://picsum.photos/200/80" alt="Acme Corporation Logo" class="client-logo">
+<BR>        
+<h3>Acme Corporation, UK</h3>
+<BR>
+        <p><strong>Case Study: Financial Optimization</strong></p>
+        <p>Implemented a new financial strategy to optimize cash flow and reduce operational costs. Achieved a 20% increase in annual revenue and a 15% reduction in operating expenses.</p>
+<BR>        
+<p><I>"AITH Consulting provided invaluable insights that transformed our business. Their expertise in financial planning and analysis allowed us to make data-driven decisions that have significantly improved our bottom line."</I> <BR>- [Name], CFO, Acme Corporation</p>
+      </div>
+      <div class="section-card">
+    <img src="https://picsum.photos/200/80" alt="TechStart Inc. Logo" class="client-logo">
+<BR>
+        <h3>TechStart Inc., UK</h3>
+<BR>
+        <p><strong>Case Study: Strategic Growth</strong></p>
+        <p>Developed a comprehensive growth strategy to scale operations and expand market reach. Secured $5 million in Series A funding and increased market share by 30%.</p>
+<BR>        <p><I>"AITH Consulting's strategic guidance was instrumental in our rapid growth. Their team helped us identify key opportunities and develop a winning business plan."</I><BR> - [Name], CEO, TechStart Inc.</p>
+      </div>
+      <div class="section-card">
+<img src="https://picsum.photos/200/80" alt="Retail Solutions Ltd" class="client-logo">
+<BR>
+        <h3>Retail Solutions Ltd., Kuwait</h3>
+      <BR>  <p><strong>Case Study: Operational Excellence</strong></p>
+        <p>Conducted a comprehensive business process reengineering to improve efficiency and customer satisfaction. Reduced order processing time by 25% and increased customer satisfaction ratings by 15%.</p>
+<BR>
+        <p><I>"AITH Consulting's expertise in process optimization helped us streamline our operations and deliver exceptional customer experiences. We're grateful for their partnership."</I><BR> - [Name], COO, Retail Solutions Ltd.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-2xl font-bold mb-4">Join Our Satisfied Clients</h3>
+    <p class="text-gray-600 mb-8">Let's discuss how we can help you achieve your business goals.</p>
+    <a href="index.html#contact" class="btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<footer class="bg-gray-900 py-6">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <p class="text-sm text-gray-600">
+      © 2024 AITH Consulting. All rights reserved. 
+      <span class="text-yellow-600 cursor-pointer" id="terms-link">Terms and Conditions</span> |
+      <span class="text-yellow-600 cursor-pointer" id="privacy-link">Privacy Policy</span>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
